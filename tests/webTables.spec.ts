@@ -5,6 +5,5 @@ test('web tables', async({page}) => {
     await page.goto('/pages/tables/smart-table')
 
     await page.getByRole('row', {name: 'fat@yandex.ru'}).locator('.nb-edit').click();
-    await email.clear()
     await email.fill('change@address.com')
 })
