@@ -73,6 +73,7 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   webServer: {
     command: 'npm start',
+    cwd: './website',
     url: 'http://localhost:4200',
     timeout: 120000,
     reuseExistingServer: !process.env.CI,
