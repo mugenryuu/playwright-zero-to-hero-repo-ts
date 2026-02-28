@@ -1,18 +1,20 @@
 import { Page } from '@playwright/test'
+import { HelperBase } from './HelperBase';
 
-export class FormLayoutsPage {
-    readonly page: Page
+export class FormLayoutsPage extends HelperBase{
 
     constructor(page: Page) {
-        this.page = page
+        super(page)
     }
 
     async submitUsingTheGridForm(email: string, password: string, option: string) {
         const usingTheGridsForm = this.page.locator('nb-card', { hasText: "Using the Grid" })
+
         await usingTheGridsForm.getByPlaceholder('Email').fill(email);
         await usingTheGridsForm.getByPlaceholder('Password').fill(password);
         await usingTheGridsForm.getByRole('radio', { name: option }).check({ force: true });
         await usingTheGridsForm.getByRole('button', { name: 'Sign in' }).click();
+        await this.waitForNumberOfSeconds(2);
     }
 
     async submitUsingTheInlineForm(name: string, email: string) {
@@ -25,5 +27,6 @@ export class FormLayoutsPage {
             await toggleRememberMe.check({ force: true });
         }
         await usingTheInlineForm.getByRole('button', { name: 'Submit' }).click();
+        await this.waitForNumberOfSeconds(2);
     }
 }

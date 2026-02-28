@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test'
-import { NavigationPage } from './NavigationPage.spec';
-import { FormLayoutsPage } from './FormLayoutsPage.spec';
+import { NavigationPage } from './NavigationPage';
+import { FormLayoutsPage } from './FormLayoutsPage';
 
 export class PageManager {
     private readonly page: Page;
