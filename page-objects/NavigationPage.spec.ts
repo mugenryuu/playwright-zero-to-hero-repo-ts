@@ -7,57 +7,57 @@ export class NavigationPage {
         this.page = page
     }
 
-    async formLayoutsPageNavigation() {
+    async formLayoutsPage() {
         this.dropDownExpandedCheck('Forms');
         await this.page.getByRole('link', { name: 'Form Layouts' }).click();
     }
 
-    async datePickerPageNavigation() {
+    async datePickerPage() {
         this.dropDownExpandedCheck('Forms');
         await this.page.getByRole('link', { name: 'Datepicker' }).click();
     }
 
-    async dialogPageNavigation() {
+    async dialogPage() {
         this.dropDownExpandedCheck('Modal & Overlays');
         await this.page.getByRole('link', { name: 'Dialog' }).click();
     }
 
-    async windowPageNavigation() {
+    async windowPage() {
         this.dropDownExpandedCheck('Modal & Overlays');
         await this.page.getByRole('link', { name: 'Window' }).click();
     }
 
-    async popoverPageNavigation() {
+    async popoverPage() {
         this.dropDownExpandedCheck('Modal & Overlays');
         await this.page.getByRole('link', { name: 'Popover' }).click();
     }
 
-    async toastrPageNavigation() {
+    async toastrPage() {
         this.dropDownExpandedCheck('Modal & Overlays');
         await this.page.getByRole('link', { name: 'Toastr' }).click();
     }
 
-    async tooltipPageNavigation() {
+    async tooltipPage() {
         this.dropDownExpandedCheck('Modal & Overlays');
         await this.page.getByRole('link', { name: 'Tooltip' }).click();
     }
 
-    async calendarPageNavigation() {
+    async calendarPage() {
         this.dropDownExpandedCheck('Extra Components');
         await this.page.getByRole('link', { name: 'Calendar' }).click();
     }
 
-    async echartsPageNavigation() {
+    async echartsPage() {
         this.dropDownExpandedCheck('Charts');
         await this.page.getByRole('link', { name: 'Echarts' }).click();
     }
 
-    async smartTablePageNavigation() {
+    async smartTablePage() {
         this.dropDownExpandedCheck('Tables & Data');
         await this.page.getByRole('link', { name: 'Smart table' }).click();
     }
 
-    async treeGridPageNavigation() {
+    async treeGridPage() {
         this.dropDownExpandedCheck('Tables & Data');
         await this.page.getByRole('link', { name: 'Tree Grid' }).click();
     }
