@@ -13,11 +13,11 @@ export class PageManager {
         this.formLayoutsPage = new FormLayoutsPage(this.page)
     }
 
-    navigateTo() {
+    get navigateTo() {
         return this.navigationPage;
     }
 
-    onFormLayoutsPage() {
+    get onFormLayoutsPage() {
         return this.formLayoutsPage;
     }
 }
